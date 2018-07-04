@@ -11,19 +11,16 @@ const filterReducerDefaultState = {
 export const filterReducer = (state = filterReducerDefaultState, action) => {
   switch(action.type){
     case 'SET_TEXT_FILTERS':
-      console.log('SET_TEXT_FILTERS')
       return {
         ...state,
         text: action.text
       }
     case 'SORT_BY_DATE':
-      console.log('SORT_BY_DATE')
       return {
         ...state,
         sortBy: action.sortBy
       }
     case 'SORT_BY_AMOUNT':
-      console.log('SORT_BY_AMOUNT')
       return {
         ...state,
         sortBy: action.sortBy
