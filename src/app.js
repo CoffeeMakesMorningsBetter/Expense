@@ -13,14 +13,14 @@ const store = configureStore();
 
 
 // addExpense -> Water bill
-store.dispatch(addExpense({description: 'Water Bill'}))
+store.dispatch(addExpense({description: 'Water Bill', amount: 100}))
 // addExpense -> Gas bill
-store.dispatch(addExpense({description: 'Gas Bill'}))
+store.dispatch(addExpense({description: 'Gas Bill', amount: 50}))
 // setTextFilter -> bill
 store.dispatch(setTextFilter('bill'))
 
 setTimeout(() => {
-  store.dispatch(setTextFilter('rent'))
+  store.dispatch(setTextFilter('water'))
 },3000)
 
 // getVisibleExpenses
